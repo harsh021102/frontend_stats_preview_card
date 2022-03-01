@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 80%;
+    height: 60%;
+    overflow: hidden;
+}
+.card{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.text-section{
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(244, 38%, 16%);
+    align-items: center;
+}
+.content{
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+}
+.content .heading{
+    grid-column: 1/4;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+.content .heading span{
+    color: hsla(277, 64%, 61%,0.9);
+}
+.content p{
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 400;
+}
+.c-section h2{
+    font-size:1.4em;
+    color: hsl(0, 0%, 100%);
+}
+.c-section p{
+    font-size: 13px;
+}
+.content p{
+    grid-column: 1/4;
+}
+.image-section{
+    grid-column: 2/3;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    background-image: 
+    linear-gradient(
+        hsla(277, 78%, 61%,0.6), 
+        hsla(277, 78%, 61%,0.6)
+        ),
+        url(images/image-header-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+    
+@media (max-width: 768px)
+{
+    section{
+        width: 100vw;
+        height: 100vh;
+        background-color: hsl(233, 47%, 7%);
+        display: flex;
+        justify-content: center;
+    }
+    .container{
+        width: 90%;
+        height: 95%;
+    }
+    .card{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+    .text-section{
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+    .image-section{
+        height: 50px;
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .image{
+        width: 100%;
+        height: 100%;
+        background-image: 
+        linear-gradient(
+            hsla(277, 78%, 61%,0.6), 
+            hsla(277, 78%, 61%,0.6)
+            ),
+            url(images/image-header-mobile.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    .content .heading{
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 1.5em;
+    }
+    .content p{
+        text-align: center;
+        font-size: 11px;
+        padding: 10px 0;
+    }
+    .c-section{
+        padding: 10px 0; 
+        grid-column: 2/3;
+    }
+    .c-section h2{
+        text-align: center;
+        font-size: 1.1em;
+    }
+    .c-section p{
+        text-align: center;
+        font-size: 12px;
+    }
+}
